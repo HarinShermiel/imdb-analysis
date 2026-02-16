@@ -114,4 +114,4 @@ imdb-analysis/
 
 ---
 
-⭐ *Se te有帮助, considere dar uma estrela!*
+⭐ *Se te agradou, considere dar uma estrela!*
