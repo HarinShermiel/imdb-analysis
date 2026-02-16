@@ -4,9 +4,48 @@
 ![Pandas](https://img.shields.io/badge/Pandas-1.3+-orange?style=flat)
 ![Seaborn](https://img.shields.io/badge/Seaborn-0.11+-green?style=flat)
 
-## 📊 Descrição do Projeto
+## 📊 Descrição
 
-Este projeto consiste em uma análise exploratória de dados (EDA) detalhada dos 1000 melhores filmes do IMDb, buscando entender padrões, tendências e insights sobre a indústria cinematográfica através de dados objetivos.
+Análise exploratória de dados (EDA) dos 1000 melhores filmes do IMDb, buscando entender padrões e tendências na indústria cinematográfica.
+
+---
+
+## 🚀 Como Executar (FÁCIL!)
+
+### Opção 1: Executar o Script (Recomendado)
+
+```bash
+# 1. Clone o projeto
+git clone https://github.com/HarinShermiel/imdb-analysis.git
+cd imdb-analysis
+
+# 2. Instale as bibliotecas
+pip install pandas numpy matplotlib seaborn
+
+# 3. Execute
+python analise.py
+```
+
+O script vai:
+- Baixar o dataset automaticamente (se não tiver)
+- Limpar os dados
+- Fazer todas as análises
+- Gerar os gráficos na pasta `results/`
+- Mostrar os insights no terminal
+
+---
+
+### Opção 2: Usar o Jupyter Notebook
+
+```bash
+# Instale Jupyter
+pip install jupyter
+
+# Execute
+jupyter notebook
+```
+
+Abra `notebooks/analise_filmes.ipynb` e execute célula por célula.
 
 ---
 
@@ -14,112 +53,65 @@ Este projeto consiste em uma análise exploratória de dados (EDA) detalhada dos
 
 ```
 imdb-analysis/
-├── data/                    # Dataset CSV
+├── data/                    # Dataset (baixe do Kaggle se necessário)
 │   └── imdb_top_1000.csv
 ├── notebooks/
-│   └── analise_filmes.ipynb # Notebook principal
-├── images/                  # Gráficos gerados
-├── README.md                # Este arquivo
-└── requirements.txt         # Bibliotecas Python
-```
-
----
-
-## 🛠️ Tecnologias e Bibliotecas
-
-- **Python 3.9+** - Linguagem principal
-- **Pandas** - Manipulação e análise de dados
-- **NumPy** - Operações numéricas
-- **Matplotlib** - Visualização de dados
-- **Seaborn** - Gráficos estatísticos
-
----
-
-## 🚀 Como Executar
-
-### 1. Clone o repositório
-
-```bash
-git clone https://github.com/HarinShermiel/imdb-analysis.git
-cd imdb-analysis
-```
-
-### 2. Crie um ambiente virtual (opcional)
-
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-```
-
-### 3. Instale as dependências
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Baixe o dataset
-
-O dataset está disponível em: [IMDb Dataset - Kaggle](https://www.kaggle.com/datasets/harshitshankhdhar/imdb-dataset-of-top-1000-movies-and-tv-shows)
-
-Coloque o arquivo `imdb_top_1000.csv` na pasta `data/`.
-
-### 5. Execute o Jupyter Notebook
-
-```bash
-jupyter notebook notebooks/analise_filmes.ipynb
+│   └── analise_filmes.ipynb # Jupyter Notebook
+├── results/                 # 📊 Resultados já gerados!
+│   ├── histograma_notas.png
+│   ├── grafico_genero.png
+│   ├── grafico_ano.png
+│   ├── grafico_duracao.png
+│   └── insights.txt
+├── analise.py              # 🎯 Script principal (execute este!)
+├── README.md
+└── requirements.txt
 ```
 
 ---
 
 ## 📈 Análises Realizadas
 
-### Perguntas Respondidas
+### 5 Perguntas Respondidas
 
-1. **Qual a distribuição de notas IMDb?**
-2. **Qual gênero tem maior nota média?**
-3. **Qual a relação entre ano e nota?**
-4. **Top 10 diretores por média de avaliação?**
-5. **Evolução da duração média dos filmes por década?**
+| # | Pergunta |
+|---|----------|
+| 1 | Qual a distribuição de notas IMDb? |
+| 2 | Qual gênero tem maior nota média? |
+| 3 | Qual a relação entre ano e nota? |
+| 4 | Top 10 diretores por média de avaliação? |
+| 5 | Evolução da duração média por década? |
 
-### Visualizações Geradas
+### 4 Visualizações
 
 | Gráfico | Descrição |
 |---------|-----------|
-| 📊 Histograma | Distribuição das notas IMDb |
-| 📈 Barras | Nota média por gênero |
-| 📉 Linha | Evolução da nota por ano |
-| 🔵 Scatter | Relação duração vs nota |
+| 📊 histograma_notas.png | Distribuição das notas IMDb |
+| 📈 grafico_genero.png | Nota média por gênero |
+| 📉 grafico_ano.png | Evolução da nota por ano |
+| 🔵 grafico_duracao.png | Relação duração vs nota |
 
 ---
 
 ## 💡 Principais Insights
 
-1. **Distribuição de Notas:** A maioria dos filmes possui notas entre 7.5 e 8.5, com média de ~7.9
+1. **Distribuição de Notas:** Média ~7.9, maioria entre 7.5 e 8.5
 
-2. **Gêneros de Maior Qualidade:** Film-Noir, War e Biography lideram as avaliações
+2. **Gêneros de Maior Qualidade:** Film-Noir, War e Biography lideram
 
-3. **Evolução Temporal:** Filmes mais recentes apresentam tendência levemente superior de notas
+3. **Evolução Temporal:** Filmes mais recentes têm notas levemente melhores
 
-4. **Diretores Consistentes:** Christopher Nolan, Quentin Tarantino e Steven Spielberg aparecem múltiplas vezes
+4. **Diretores Consistentes:** Christopher Nolan, Tarantino, Spielberg
 
 ---
 
 ## 📝 Autor
 
-**Guilherme Fernandes**
+**Guilherme Fernandes** - Analista de Dados Júnior
 
-- 📍 Brasília, DF
-- 💼 Buscando oportunidades como Analista de Dados Júnior
 - 📧 guilherme.f.medeiros.o@gmail.com
 - 🔗 [LinkedIn](https://www.linkedin.com/in/guilherme-fernandes-b2ab99364/)
 
 ---
 
-## 📜 Licença
-
-Este projeto está sob a licença MIT.
-
----
-
-*⭐ Se este projeto te ajudou, considere dar uma estrela!*
+⭐ *Se te有帮助, considere dar uma estrela!*
